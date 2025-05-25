@@ -6,6 +6,8 @@ export interface Product {
   price: number;
   description: string;
   featured?: boolean;
+  benefits?:string[];
+  indications?:string;
 }
 
 export interface Category {

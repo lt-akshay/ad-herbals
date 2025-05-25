@@ -7,11 +7,11 @@ import { Filter } from 'lucide-react';
 const Products: React.FC = () => {
   const [searchParams] = useSearchParams();
   const categoryParam = searchParams.get('category');
-  
+
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(categoryParam);
   const [filtersOpen, setFiltersOpen] = useState(false);
-  
+
   const categories = Array.from(new Set(products.map(product => product.category)));
 
   useEffect(() => {
@@ -22,14 +22,14 @@ const Products: React.FC = () => {
 
   useEffect(() => {
     let filtered = [...products];
-    
+
     if (selectedCategory) {
       const normalizedCategory = selectedCategory.replace(/-/g, ' ');
       filtered = filtered.filter(
         product => product.category.toLowerCase() === normalizedCategory.toLowerCase()
       );
     }
-    
+
     setFilteredProducts(filtered);
   }, [selectedCategory]);
 
@@ -51,23 +51,22 @@ const Products: React.FC = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row gap-8">
           {/* Mobile filter toggle */}
-          <button 
+          <button
             className="md:hidden flex items-center justify-between w-full p-4 bg-white shadow rounded-md"
             onClick={() => setFiltersOpen(!filtersOpen)}
           >
             <span className="font-medium">Filters</span>
             <Filter size={20} />
           </button>
-          
+
           {/* Sidebar filters */}
           <div className={`w-full md:w-64 ${filtersOpen ? 'block' : 'hidden'} md:block`}>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="font-bold text-lg mb-4">Categories</h3>
               <div className="space-y-2">
-                <div 
-                  className={`cursor-pointer p-2 rounded hover:bg-green-50 ${
-                    selectedCategory === null ? 'bg-green-100 text-green-800 font-medium' : ''
-                  }`}
+                <div
+                  className={`cursor-pointer p-2 rounded hover:bg-green-50 ${selectedCategory === null ? 'bg-green-100 text-green-800 font-medium' : ''
+                    }`}
                   onClick={() => handleCategoryChange(null)}
                 >
                   All Products
@@ -75,11 +74,10 @@ const Products: React.FC = () => {
                 {categories.map((category) => (
                   <div
                     key={category}
-                    className={`cursor-pointer p-2 rounded hover:bg-green-50 ${
-                      selectedCategory?.toLowerCase().replace(/-/g, ' ') === category.toLowerCase() 
-                        ? 'bg-green-100 text-green-800 font-medium' 
+                    className={`cursor-pointer p-2 rounded hover:bg-green-50 ${selectedCategory?.toLowerCase().replace(/-/g, ' ') === category.toLowerCase()
+                        ? 'bg-green-100 text-green-800 font-medium'
                         : ''
-                    }`}
+                      }`}
                     onClick={() => handleCategoryChange(category)}
                   >
                     {category}
@@ -118,7 +116,9 @@ const Products: React.FC = () => {
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {filteredProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <div key={product.id} className="flex justify-center">
+                    <ProductCard product={product} />
+                  </div>
                 ))}
               </div>
             )}

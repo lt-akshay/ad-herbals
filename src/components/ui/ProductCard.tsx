@@ -27,8 +27,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, size = 'md' }) => {
   return (
     <div className={`${cardSizes[size]} bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300`}>
       <div className="relative">
-        <Link to="">
-        {/* <Link to={`/products/${id}`}> */}
+        <Link to={`/products/${id}`}> 
           <img 
             src={image} 
             alt={name} 
@@ -49,7 +48,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, size = 'md' }) => {
             {name}
           </h3>
         </Link>
-        {/* <div className="flex justify-between items-center mt-3">
+        <div className="flex justify-between items-center mt-3">
           <span className="font-bold text-gray-900">Rs {price.toFixed(2)}</span>
           <Button 
             variant="primary" 
@@ -59,7 +58,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, size = 'md' }) => {
             <ShoppingBag size={16} />
             <span>Add</span>
           </Button>
-        </div> */}
+        </div>
       </div>
     </div>
   );

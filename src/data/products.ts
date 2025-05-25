@@ -26,7 +26,7 @@ export const products: Product[] = [
     category: 'Face Care',
     image: alovera,
     price: 24.99,
-    description: 'Alovera Moisturing Gel with Alovera pulp, manjishtha and turmeric extract.',
+    description: 'Aloe vera is a gel-like substance obtained from aloe, which is a succulent plant that typically grows in hot, dry climates. "[Aloe vera] has antioxidant, antibacterial and anti- inflammatory properties that boost healing, moisturize the skin and prevent aging."It supports the production and release of collagen.',
     featured: true,
   },
   {
@@ -37,24 +37,43 @@ export const products: Product[] = [
     price: 29.99,
     description: 'An intensely hydrating serum that locks in moisture and gives your skin a radiant glow. Perfect for all skin types.',
     featured: true,
+     benefits: [
+    'Anti-Hairfall',
+    'Anti-Dandruff',
+    'Adds strength and shine',
+    'Boosts hair growth',
+    'Controls scalp inflammation'
+  ],
+
+  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
   },
   {
-    id: '3',
-    name: 'Onion Herbal Hair Oil',
-    category: 'Body Care',
-    image: onion,
-    price: 18.99,
-    description: 'A gentle, fragrant body lotion that keeps your skin soft and supple all day long with natural ingredients.',
-    featured: true,
-  },
+  id: '3',
+  name: 'Onion Herbal Hair Oil',
+  category: 'Body Care',
+  image: onion, // import this or use a URL
+  price: 295,
+  featured: true,
+  description: 'This powerful remedy protects and nourishes hair to reduce hair loss and breakage, with the added benefits of Fenugreek.',
+
+  benefits: [
+    'Anti-Hairfall',
+    'Anti-Dandruff',
+    'Adds strength and shine',
+    'Boosts hair growth',
+    'Controls scalp inflammation'
+  ],
+
+  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
+},
   {
     id: '4',
     name: 'Rose Moisturizer',
     category: 'Face Care',
     image: rose,
     price: 22.99,
-    description: 'Target dark circles and puffiness with this revitalizing eye cream enriched with caffeine and peptides.',
-    featured: false,
+    description: 'It effectively blocks that process in the skin that leads to discoloration. Rose Moisturizer also reduces any redness, rash, pain, or itchiness that may be caused by this condition. This improves your self-esteem and confidence as your appearance changes.',
+    featured: false,    
   },
   {
     id: '5',
@@ -64,6 +83,15 @@ export const products: Product[] = [
     price: 15.99,
     description: 'Gentle yet effective exfoliating scrub that removes dead skin cells and unclogs pores for smoother skin.',
     featured: false,
+     benefits: [
+    'Anti-Hairfall',
+    'Anti-Dandruff',
+    'Adds strength and shine',
+    'Boosts hair growth',
+    'Controls scalp inflammation'
+  ],
+
+  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
   },
   {
     id: '6',
@@ -71,8 +99,16 @@ export const products: Product[] = [
     category: 'Hair Care',
     image: shampoo,
     price: 12.99,
-    description: 'A gentle, nourishing shampoo that cleans and strengthens hair, leaving it soft, shiny, and manageable.',
+    description: 'Get rid of that bad hair day with just one squeeze of shampoo and also get the benefits of coconut.',
     featured: false,
+     benefits: [
+      'Control Dandruff',
+ 'Treat Hair loss',
+ 'Accelerate hair growth',
+ 'Smooth and shine hair'
+  ],
+
+  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
   },
   {
     id: '7',
@@ -82,6 +118,15 @@ export const products: Product[] = [
     price: 12.99,
     description: 'A deeply nourishing conditioner that repairs damaged hair and prevents split ends for healthier, shinier hair.',
     featured: false,
+     benefits: [
+    'Anti-Hairfall',
+    'Anti-Dandruff',
+    'Adds strength and shine',
+    'Boosts hair growth',
+    'Controls scalp inflammation'
+  ],
+
+  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
   },
   {
     id: '8',
@@ -89,7 +134,7 @@ export const products: Product[] = [
     category: 'Face Care',
     image: honey,
     price: 19.99,
-    description: 'A clay-based face mask that draws out impurities, tightens pores, and leaves skin feeling refreshed and clean.',
+    description: 'Honey moisturizes the skin making it smooth, firm, and youthful. Almond oil protects the skin from dryness and wrinkles. Absorbs into the skin quickly, making it firm and healthy without leaving it greasy.',
     featured: true,
   },
   {
@@ -98,8 +143,8 @@ export const products: Product[] = [
     category: 'Body Care',
     image: fruitbl,
     price: 9.99,
-    description: 'An intensive hand cream that repairs and protects dry, cracked hands with natural oils and butters.',
-    featured: false,
+    description: 'Active fruit boosters present in the body lotion revitalize skin for youthful beauty, result in softer, silky, younger looking skin. Its lightweight formula absorbs easily into the skin and makes it ideal for all year-round use making the skin glow with health and vitality.',
+    featured: false,    
   },
   {
     id: '10',
@@ -109,6 +154,15 @@ export const products: Product[] = [
     price: 17.99,
     description: 'High protection sunscreen that shields skin from harmful UV rays while hydrating and nourishing.',
     featured: false,
+     benefits: [
+    'Anti-Hairfall',
+    'Anti-Dandruff',
+    'Adds strength and shine',
+    'Boosts hair growth',
+    'Controls scalp inflammation'
+  ],
+
+  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
   },
   {
     id: '11',
@@ -118,6 +172,15 @@ export const products: Product[] = [
     price: 14.99,
     description: 'A cooling, soothing gel that calms sun-exposed skin, reduces redness, and prevents peeling.',
     featured: false,
+     benefits: [
+    'Anti-Hairfall',
+    'Anti-Dandruff',
+    'Adds strength and shine',
+    'Boosts hair growth',
+    'Controls scalp inflammation'
+  ],
+
+  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
   },
   {
     id: '12',
@@ -127,6 +190,19 @@ export const products: Product[] = [
     price: 34.99,
     description: 'A rich night cream that works while you sleep to reduce wrinkles and improve skin elasticity.',
     featured: true,
+     benefits: [
+     'Hydration.',
+ 'Visibly Smooths and soften.',
+ 'Minimizes the look of fine.',
+ 'lines and wrinkles.',
+ 'Helps visibly reduce redness.',
+ 'and skin irritation.',
+ 'Nutrient-rich antioxidants.',
+ 'Absorbs easily for instant hydration.',
+ 'Great exfoliant base coconut cream.'
+  ],
+
+  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
   },
   {
     id: '13',
@@ -136,6 +212,15 @@ export const products: Product[] = [
     price: 34.99,
     description: 'A rich night cream that works while you sleep to reduce wrinkles and improve skin elasticity.',
     featured: true,
+     benefits: [
+    'Anti-Hairfall',
+    'Anti-Dandruff',
+    'Adds strength and shine',
+    'Boosts hair growth',
+    'Controls scalp inflammation'
+  ],
+
+  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
   },
   {
     id: '14',
@@ -143,8 +228,12 @@ export const products: Product[] = [
     category: 'Face Care',
     image: chandan,
     price: 34.99,
-    description: 'A rich night cream that works while you sleep to reduce wrinkles and improve skin elasticity.',
+    description: 'Chandan and Kesar Gel Known to be an antiseptic agent, Sandalwood, popularly known as Chandan in India, is also said to be a natural healer in Ayurveda.AD Herbals Sandalwood Face Gel helps reduce inflammation,soothe sunburns, fight acne causing bacteria, and remove sun tan.',
     featured: false,
+     benefits: [
+    ' It helps to fight Acne & Wrinkles',
+    ],
+
   },
   {
     id: '15',
@@ -154,6 +243,15 @@ export const products: Product[] = [
     price: 34.99,
     description: 'A rich night cream that works while you sleep to reduce wrinkles and improve skin elasticity.',
     featured: false,
+     benefits: [
+    'Anti-Hairfall',
+    'Anti-Dandruff',
+    'Adds strength and shine',
+    'Boosts hair growth',
+    'Controls scalp inflammation'
+  ],
+
+  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
   },
   {
     id: '16',
@@ -161,17 +259,26 @@ export const products: Product[] = [
     category: 'Face Care',
     image: saffron,
     price: 34.99,
-    description: 'A rich night cream that works while you sleep to reduce wrinkles and improve skin elasticity.',
+    description: 'Constant use of saffron can improve your skin tone, smoothen its texture, and brighten your appearance. It can also help reduce excessive sun tan and thus provide a natural radiance. In addition, this red-colored flower helps treat hyperpigmentation, acne, and scars and helps you have a blemish-free appearance.',
     featured: false,
+     benefits: [
+    'Anti-Hairfall',
+    'Anti-Dandruff',
+    'Adds strength and shine',
+    'Boosts hair growth',
+    'Controls scalp inflammation'
+  ],
+
+  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
   },
   {
     id: '17',
     name: 'Refreshing Cleansing Milk',
     category: 'Face Care',
     image: cleansing,
-    price: 34.99,
-    description: 'A rich night cream that works while you sleep to reduce wrinkles and improve skin elasticity.',
-    featured: false,
+    price: 70,
+    description: 'Cleansing milk is an excellent choice for those with dry or sensitive skin. Its creamy texture and nourishing ingredients help to hydrate and purify the skin, leaving it feeling soft and supple. Cleansing milk also helps to remove impurities from the skin, leaving it looking nourished and glowing.',
+    featured: false,  
   },
 ];
 

@@ -4,18 +4,16 @@ import { Link } from 'react-router-dom';
 interface NavbarProps {
   isScrolled: boolean;
   isMobile?: boolean;
+  onLinkClick?: () => void; // Optional callback for mobile menu
 }
 
-const Navbar: React.FC<NavbarProps> = ({ isScrolled, isMobile = false }) => {
+const Navbar: React.FC<NavbarProps> = ({ isScrolled, isMobile = false, onLinkClick }) => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/products', label: 'Products' },
-    { path: '/', label: 'Categories' },
-    { path: '/', label: 'About Us' },
-    { path: '/', label: 'Contact' },
-    // { path: '/categories', label: 'Categories' },
-    // { path: '/about', label: 'About Us' },
-    // { path: '/contact', label: 'Contact' },
+    { path: '/about', label: 'About Us' },
+    { path: '/contact-us', label: 'Contact' },
+    { path: '/privacy-policy', label: 'Privacy Policy' },
   ];
 
   return (
@@ -24,6 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled, isMobile = false }) => {
         <Link
           key={link.path}
           to={link.path}
+          onClick={onLinkClick} // <-- closes the mobile menu on click
           className={`font-medium transition-colors duration-200 ${
             isScrolled
               ? 'text-gray-800 hover:text-green-700'

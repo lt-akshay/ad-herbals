@@ -81,7 +81,7 @@ const Header: React.FC = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white">
           <div className="container mx-auto px-4 py-4">
-            <Navbar isScrolled={true} isMobile={true} />
+            <Navbar isScrolled={true} isMobile={true} onLinkClick={() => setMobileMenuOpen(false)} />
           </div>
         </div>
       )}
