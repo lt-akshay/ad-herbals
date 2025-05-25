@@ -49,7 +49,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, size = 'md' }) => {
           </h3>
         </Link>
         <div className="flex justify-between items-center mt-3">
-          <span className="font-bold text-gray-900">Rs {price.toFixed(2)}</span>
+          <span className="font-bold text-gray-900">₹ {price.toFixed(2)}</span>
           <Button 
             variant="primary" 
             size="sm"
