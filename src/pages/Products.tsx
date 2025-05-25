@@ -35,6 +35,7 @@ const Products: React.FC = () => {
 
   const handleCategoryChange = (category: string | null) => {
     setSelectedCategory(category);
+    setFiltersOpen(false)
   };
 
   return (
