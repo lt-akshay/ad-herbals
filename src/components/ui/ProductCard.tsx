@@ -14,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, size = 'md' }) => {
 
   const cardSizes = {
     sm: 'max-w-[200px]',
-    md: 'max-w-[280px]',
+    md: 'max-w-[300px]',
     lg: 'max-w-[350px]',
   };
 

@@ -20,10 +20,10 @@ const ProductDetail: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Product Not Found</h2>
-          <p className="mb-6">The product you're looking for doesn't seem to exist.</p>
-          <Link to="/products">
-            <Button variant="primary">Back to Products</Button>
+          <h2 className="text-2xl font-bold mb-4">Page Not Found</h2>
+          <p className="mb-6">The page you're looking for doesn't seem to exist.</p>
+          <Link to="/">
+            <Button variant="primary">Back to Home</Button>
           </Link>
         </div>
       </div>

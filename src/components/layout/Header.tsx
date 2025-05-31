@@ -33,7 +33,7 @@ const Header: React.FC = () => {
               alt="AD Harbals"
               className="h-16 w-16 rounded-full object-cover"
             />
-            <span className="text-4xl font-bold text-green-800 leading-tight pl-3">
+            <span className="text-4xl font-bold text-green-800 leading-tight pl-3" style={{color:'#afaf53'}}>
               AD Herbals
             </span>
           </Link>

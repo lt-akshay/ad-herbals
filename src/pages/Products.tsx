@@ -8,30 +8,34 @@ const Products: React.FC = () => {
   const [searchParams] = useSearchParams();
   const categoryParam = searchParams.get('category');
 
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  // const [filteredProducts, setFilteredProducts] = useState(products);
+  const cosmeticProducts = products.filter(p => p.type === 'cosmetic');
+const [filteredProducts, setFilteredProducts] = useState(cosmeticProducts);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(categoryParam);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
-  const categories = Array.from(new Set(products.map(product => product.category)));
+  // const categories = Array.from(new Set(products.map(product => product.category)));
+  const categories = Array.from(new Set(cosmeticProducts.map(product => product.category)));
+
+  useEffect(() => {
+  let filtered = [...cosmeticProducts];
+
+  if (selectedCategory) {
+    const normalizedCategory = selectedCategory.replace(/-/g, ' ');
+    filtered = filtered.filter(
+      product => product.category.toLowerCase() === normalizedCategory.toLowerCase()
+    );
+  }
+
+    setFilteredProducts(filtered);
+  }, [selectedCategory]);
+
 
   useEffect(() => {
     if (categoryParam) {
       setSelectedCategory(categoryParam);
     }
   }, [categoryParam]);
-
-  useEffect(() => {
-    let filtered = [...products];
-
-    if (selectedCategory) {
-      const normalizedCategory = selectedCategory.replace(/-/g, ' ');
-      filtered = filtered.filter(
-        product => product.category.toLowerCase() === normalizedCategory.toLowerCase()
-      );
-    }
-
-    setFilteredProducts(filtered);
-  }, [selectedCategory]);
 
   const handleCategoryChange = (category: string | null) => {
     setSelectedCategory(category);
