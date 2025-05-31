@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link to="/" className="hover:text-green-300">Home</Link></li>
-              <li><Link to="/products" className="hover:text-green-300">Products</Link></li>
+              {/* <li><Link to="/products" className="hover:text-green-300">Products</Link></li> */}
               <li><Link to="/about" className="hover:text-green-300">About Us</Link></li>
               <li><Link to="/contact-us" className="hover:text-green-300">Contact</Link></li>
               <li><Link to="/privacy-policy" className="hover:text-green-300">Privacy Policy</Link></li>
