@@ -39,10 +39,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Categories</h4>
             <ul className="space-y-2">
-              <li><Link to="/products?category=face-care" className="hover:text-green-300">Face Care</Link></li>
-              <li><Link to="/products?category=body-care" className="hover:text-green-300">Body Care</Link></li>
-              <li><Link to="/products?category=hair-care" className="hover:text-green-300">Hair Care</Link></li>
-              <li><Link to="/products?category=sun-care" className="hover:text-green-300">Sun Care</Link></li>
+              <li><Link to="/products/cosmetics?category=face-care" className="hover:text-green-300">Face Care</Link></li>
+              <li><Link to="/products/cosmetics?category=body-care" className="hover:text-green-300">Body Care</Link></li>
+              <li><Link to="/products/cosmetics?category=hair-care" className="hover:text-green-300">Hair Care</Link></li>
+              <li><Link to="/products/cosmetics?category=sun-care" className="hover:text-green-300">Sun Care</Link></li>
             </ul>
           </div>
 
