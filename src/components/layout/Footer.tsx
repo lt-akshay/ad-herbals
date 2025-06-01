@@ -1,8 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
+
+  const navigate = useNavigate();
+
+  const handleLinkClick = (path: string) => {
+    window.scrollTo(0, 0);
+    navigate(path);
+  };
+
+
   return (
     <footer className="bg-green-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -39,10 +48,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Categories</h4>
             <ul className="space-y-2">
-              <li><Link to="/products/cosmetics?category=face-care" className="hover:text-green-300">Face Care</Link></li>
-              <li><Link to="/products/cosmetics?category=body-care" className="hover:text-green-300">Body Care</Link></li>
-              <li><Link to="/products/cosmetics?category=hair-care" className="hover:text-green-300">Hair Care</Link></li>
-              <li><Link to="/products/cosmetics?category=sun-care" className="hover:text-green-300">Sun Care</Link></li>
+              <li><span onClick={() => handleLinkClick('/products/cosmetics?category=face-care')} className="hover:text-green-300 cursor-pointer">Face Care</span></li>
+              <li><span onClick={() => handleLinkClick('/products/cosmetics?category=body-care')} className="hover:text-green-300 cursor-pointer">Body Care</span></li>
+              <li><span onClick={() => handleLinkClick('/products/cosmetics?category=hair-care')} className="hover:text-green-300 cursor-pointer">Hair Care</span></li>
+              <li><span onClick={() => handleLinkClick('/products/cosmetics?category=sun-care')} className="hover:text-green-300 cursor-pointer">Sun Care</span></li>
             </ul>
           </div>
 

@@ -9,6 +9,7 @@ import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Medicine from './pages/Medicine';
+import ScrollToTop from './pages/ScrollToTop';
 // import Dashboard from './pages/admin/Dashboard';
 // import AdminProducts from './pages/admin/Products';
 // import AdminCategories from './pages/admin/Categories';
@@ -22,6 +23,7 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <Routes>
         {/* Admin routes */}
         {/* <Route path="/admin/login" element={<Login />} />
