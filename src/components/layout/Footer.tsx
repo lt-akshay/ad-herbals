@@ -22,15 +22,12 @@ const Footer: React.FC = () => {
               Natural skincare and cosmetics that nurture your skin and respect the environment.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 rounded-full bg-green-800 hover:bg-green-700">
+              <a target='_blank' href="https://www.facebook.com/share/1DpnpgUbvh/?mibextid=wwXIfr" className="p-2 rounded-full bg-green-800 hover:bg-green-700">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="p-2 rounded-full bg-green-800 hover:bg-green-700">
+              <a target='_blank' href="https://www.instagram.com/adherbals22?igsh=cDFhcHc5N2V0M3Rk" className="p-2 rounded-full bg-green-800 hover:bg-green-700">
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="p-2 rounded-full bg-green-800 hover:bg-green-700">
-                <Twitter size={20} />
-              </a>
+              </a>            
             </div>
           </div>
 
@@ -38,7 +35,9 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link to="/" className="hover:text-green-300">Home</Link></li>
-              {/* <li><Link to="/products" className="hover:text-green-300">Products</Link></li> */}
+              <li><Link to="/medicine" className="hover:text-green-300">Medicines</Link></li>
+              <li><Link to="/cosmetics" className="hover:text-green-300">Cosmetics</Link></li>
+              <li><Link to="/products" className="hover:text-green-300">All Products</Link></li>
               <li><Link to="/about" className="hover:text-green-300">About Us</Link></li>
               <li><Link to="/contact-us" className="hover:text-green-300">Contact</Link></li>
               <li><Link to="/privacy-policy" className="hover:text-green-300">Privacy Policy</Link></li>
@@ -48,10 +47,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Categories</h4>
             <ul className="space-y-2">
-              <li><span onClick={() => handleLinkClick('/products/cosmetics?category=face-care')} className="hover:text-green-300 cursor-pointer">Face Care</span></li>
-              <li><span onClick={() => handleLinkClick('/products/cosmetics?category=body-care')} className="hover:text-green-300 cursor-pointer">Body Care</span></li>
-              <li><span onClick={() => handleLinkClick('/products/cosmetics?category=hair-care')} className="hover:text-green-300 cursor-pointer">Hair Care</span></li>
-              <li><span onClick={() => handleLinkClick('/products/cosmetics?category=sun-care')} className="hover:text-green-300 cursor-pointer">Sun Care</span></li>
+              <li><span onClick={() => handleLinkClick('/medicine?category=health-care')} className="hover:text-green-300 cursor-pointer">Health Care</span></li>
+              <li><span onClick={() => handleLinkClick('/cosmetics?category=face-care')} className="hover:text-green-300 cursor-pointer">Face Care</span></li>
+              <li><span onClick={() => handleLinkClick('/cosmetics?category=body-care')} className="hover:text-green-300 cursor-pointer">Body Care</span></li>
+              <li><span onClick={() => handleLinkClick('/cosmetics?category=hair-care')} className="hover:text-green-300 cursor-pointer">Hair Care</span></li>
             </ul>
           </div>
 

@@ -1,21 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { products } from '../data/products';
 import ProductCard from '../components/ui/ProductCard';
 import { Filter } from 'lucide-react';
 
-const Products: React.FC = () => {
+const Cosmetics: React.FC = () => {
   const [searchParams] = useSearchParams();
   const categoryParam = searchParams.get('category');
 
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  // const [filteredProducts, setFilteredProducts] = useState(products);
+  const cosmeticProducts = products.filter(p => p.type === 'cosmetic');
+  const [filteredProducts, setFilteredProducts] = useState(cosmeticProducts);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(categoryParam);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
-  const categories = Array.from(new Set(products.map(product => product.category)));
+  // const categories = Array.from(new Set(products.map(product => product.category)));
+  const categories = Array.from(new Set(cosmeticProducts.map(product => product.category)));
 
   useEffect(() => {
-    let filtered = [...products];
+    let filtered = [...cosmeticProducts];
 
     if (selectedCategory) {
       const normalizedCategory = selectedCategory.replace(/-/g, ' ');
@@ -27,6 +30,7 @@ const Products: React.FC = () => {
     setFilteredProducts(filtered);
   }, [selectedCategory]);
 
+
   useEffect(() => {
     if (categoryParam) {
       setSelectedCategory(categoryParam);
@@ -35,7 +39,7 @@ const Products: React.FC = () => {
 
   const handleCategoryChange = (category: string | null) => {
     setSelectedCategory(category);
-    setFiltersOpen(false);
+    setFiltersOpen(false)
   };
 
   return (
@@ -44,7 +48,7 @@ const Products: React.FC = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-white">All Products</h1>
           <p className="text-green-100 mt-2">
-            Discover our range of natural cosmetics and healthcare products
+            Discover our range of natural cosmetics and skincare products
           </p>
         </div>
       </div>
@@ -66,7 +70,8 @@ const Products: React.FC = () => {
               <h3 className="font-bold text-lg mb-4">Categories</h3>
               <div className="space-y-2">
                 <div
-                  className={`cursor-pointer p-2 rounded hover:bg-green-50 ${selectedCategory === null ? 'bg-green-100 text-green-800 font-medium' : ''}`}
+                  className={`cursor-pointer p-2 rounded hover:bg-green-50 ${selectedCategory === null ? 'bg-green-100 text-green-800 font-medium' : ''
+                    }`}
                   onClick={() => handleCategoryChange(null)}
                 >
                   All Products
@@ -77,7 +82,7 @@ const Products: React.FC = () => {
                     className={`cursor-pointer p-2 rounded hover:bg-green-50 ${selectedCategory?.toLowerCase().replace(/-/g, ' ') === category.toLowerCase()
                       ? 'bg-green-100 text-green-800 font-medium'
                       : ''
-                    }`}
+                      }`}
                     onClick={() => handleCategoryChange(category)}
                   >
                     {category}
@@ -87,12 +92,26 @@ const Products: React.FC = () => {
             </div>
           </div>
 
-          {/* Product Grid */}
+          {/* Product grid */}
           <div className="flex-grow">
             <div className="mb-6 flex justify-between items-center">
-              <p className="text-gray-600">
-                Showing {filteredProducts.length} product{filteredProducts.length !== 1 && 's'}
-              </p>
+              <div>
+                <p className="text-gray-600">
+                  Showing {filteredProducts.length} products
+                </p>
+              </div>
+              {/* <div>
+                <select 
+                  className="p-2 border rounded-md text-gray-700"
+                  defaultValue="default"
+                >
+                  <option value="default">Sort by</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="name-asc">Name: A to Z</option>
+                  <option value="name-desc">Name: Z to A</option>
+                </select>
+              </div> */}
             </div>
 
             {filteredProducts.length === 0 ? (
@@ -115,4 +134,4 @@ const Products: React.FC = () => {
   );
 };
 
-export default Products;
+export default Cosmetics;

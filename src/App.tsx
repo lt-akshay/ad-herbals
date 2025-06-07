@@ -10,6 +10,7 @@ import ContactUs from './pages/ContactUs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Medicine from './pages/Medicine';
 import ScrollToTop from './pages/ScrollToTop';
+import Cosmetics from './pages/Cosmetics';
 // import Dashboard from './pages/admin/Dashboard';
 // import AdminProducts from './pages/admin/Products';
 // import AdminCategories from './pages/admin/Categories';
@@ -49,13 +50,13 @@ function App() {
               <main className="flex-grow">
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  {/* <Route path="/products" element={<Products />} /> */}
+                  <Route path="/products" element={<Products />} />
                   <Route path="/products/:id" element={<ProductDetail />} />
                   <Route path="/about" element={<AboutUs />} />  
                   <Route path="/contact-us" element={<ContactUs />} />  
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />  
-                  <Route path="/products/cosmetics" element={<Products />} />
-                  <Route path="/products/medicine" element={<Medicine />} />
+                  <Route path="/medicine" element={<Medicine />} />
+                  <Route path="/cosmetics" element={<Cosmetics />} />
                 </Routes>
               </main>
               <Footer />

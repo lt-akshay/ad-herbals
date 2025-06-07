@@ -3,9 +3,9 @@ import bluberry from '../images/handwash/hand_wash_blueberry.jpg';
 import lemon from '../images/handwash/hand_wash_lemon.jpg';
 import neem from '../images/handwash/hand_wash_neem.jpg';
 import vitaminc from '../images/facewash/face_wash_vitaminc.jpg';
-import shampoo from '../images/hareCare/green_shampoo.png';
+import shampoo from '../images/hareCare/green_shampoo.jpg';
 import shampoo100 from '../images/hareCare/green_shampoo_100ml.png';
-import onion from '../images/hareCare/onion_hair_oil.png';
+import onion from '../images/hareCare/onion_hair_oil.jpg';
 import alovera from '../images/bodyCare/aloevera.png';
 import fruitbl from '../images/bodyCare/body_lotion_fruit.png';
 import honey from '../images/bodyCare/body_lotion_honey&almond.png';
@@ -16,9 +16,12 @@ import cleansing from '../images/bodyCare/cleansing_milk.png';
 import coconut from '../images/bodyCare/coconut_cream.png';
 import rose from '../images/bodyCare/rose_moisture.png';
 import saffron from '../images/bodyCare/saffron_massage_cream.png';
-import skin_brightening from '../images/bodyCare/skin_brightening.jpg';
-import kanchnar from '../images/medicine/kanchnar.png';
-import makaiKutki from '../images/medicine/makaiKutki.png';
+import skin_brightening from '../images/facewash/skin_brightening.jpg';
+import kanchnar from '../images/medicine/kanchnar.jpg';
+import makaiKutki from '../images/medicine/makaiKutki.jpg';
+import aloeliv from '../images/medicine/ALOELIV.jpg';
+import gasog from '../images/medicine/GASOG.jpg';
+import narioop from '../images/medicine/NARIROOP.jpg';
 
 
 
@@ -55,8 +58,8 @@ export const products: Product[] = [
   {
   id: '3',
   name: 'Onion Herbal Hair Oil',
-  category: 'Body Care',
-  type: 'cosmetic',
+  category: 'Health Care',
+  type: 'medicine',
   image: onion, // import this or use a URL
   price: 295,
   featured: true,
@@ -104,8 +107,8 @@ export const products: Product[] = [
   {
     id: '6',
     name: 'Nourishing Shampoo',
-    category: 'Hair Care',
-    type: 'cosmetic',
+    category: 'Health Care',
+    type: 'medicine',
     image: shampoo,
     price: 120,
     description: 'Get rid of that bad hair day with just one squeeze of shampoo and also get the benefits of coconut.',
@@ -122,7 +125,7 @@ export const products: Product[] = [
   {
     id: '7',
     name: 'Lavendar Body Wash',
-    category: 'Hair Care',
+    category: 'Body Care',
     type: 'cosmetic',
     image: lavender,
     price: 80,
@@ -141,7 +144,7 @@ export const products: Product[] = [
   {
     id: '8',
     name: 'Honey & Almond Body Lotion',
-    category: 'Face Care',
+    category: 'Body Care',
     type: 'cosmetic',
     image: honey,
     price: 90,
@@ -161,7 +164,7 @@ export const products: Product[] = [
   {
     id: '10',
     name: 'Lemon Grass Hand Wash',
-    category: 'Sun Care',
+    category: 'Body Care',
     type: 'cosmetic',
     image: lemon,
     price: 170,
@@ -180,7 +183,7 @@ export const products: Product[] = [
   {
     id: '11',
     name: 'Ocean Bridge Body Wash',
-    category: 'Sun Care',
+    category: 'Body Care',
     type: 'cosmetic',
     image: ocean_bridge,
     price: 149,
@@ -222,7 +225,7 @@ export const products: Product[] = [
   {
     id: '13',
     name: 'Bluberry & Tea Tree Hand Wash',
-    category: 'Face Care',
+    category: 'Body Care',
     type: 'cosmetic',
     image: bluberry,
     price: 120,
@@ -255,7 +258,7 @@ export const products: Product[] = [
   {
     id: '15',
     name: 'Neem and Tulsi Hand Wash',
-    category: 'Face Care',
+    category: 'Body Care',
     type: 'cosmetic',
     image: neem,
     price: 135,
@@ -303,7 +306,7 @@ export const products: Product[] = [
   {
     id: '18',
     name: 'Kanchnar',
-    category: 'Syrup',
+    category: 'Health Care',
     type: 'medicine',
     image: kanchnar,
     price: 160,
@@ -313,18 +316,66 @@ export const products: Product[] = [
   {
     id: '19',
     name: 'Makai Kutkki',
-    category: 'Syrup',
+    category: 'Health Care',
     type: 'medicine',
     image: makaiKutki,
     price: 150,
     description: 'Cleansing milk is an excellent choice for those with dry or sensitive skin. Its creamy texture and nourishing ingredients help to hydrate and purify the skin, leaving it feeling soft and supple. Cleansing milk also helps to remove impurities from the skin, leaving it looking nourished and glowing.',
     featured: false,  
-  }
+  },
+  {
+    id: '20',
+    name: 'Aloeliv',
+    category: 'Health Care',
+    type: 'medicine',
+    image: aloeliv,
+    price: 150,
+    description: 'Cleansing milk is an excellent choice for those with dry or sensitive skin. Its creamy texture and nourishing ingredients help to hydrate and purify the skin, leaving it feeling soft and supple. Cleansing milk also helps to remove impurities from the skin, leaving it looking nourished and glowing.',
+    featured: false,  
+  },
+  {
+    id: '21',
+    name: 'Gaso-G',
+    category: 'Health Care',
+    type: 'medicine',
+    image: gasog,
+    price: 150,
+    description: 'Cleansing milk is an excellent choice for those with dry or sensitive skin. Its creamy texture and nourishing ingredients help to hydrate and purify the skin, leaving it feeling soft and supple. Cleansing milk also helps to remove impurities from the skin, leaving it looking nourished and glowing.',
+    featured: false,  
+  },
+  {
+    id: '22',
+    name: 'Nari-roop DS',
+    category: 'Health Care',
+    type: 'medicine',
+    image: narioop,
+    price: 150,
+    description: 'Cleansing milk is an excellent choice for those with dry or sensitive skin. Its creamy texture and nourishing ingredients help to hydrate and purify the skin, leaving it feeling soft and supple. Cleansing milk also helps to remove impurities from the skin, leaving it looking nourished and glowing.',
+    featured: false,  
+  },
+  {
+    id: '23',
+    name: 'Nourishing Shampoo',
+    category: 'Hair Care',
+    type: 'cosmetic',
+    image: shampoo100,
+    price: 120,
+    description: 'Get rid of that bad hair day with just one squeeze of shampoo and also get the benefits of coconut.',
+    featured: false,
+     benefits: [
+      'Control Dandruff',
+ 'Treat Hair loss',
+ 'Accelerate hair growth',
+ 'Smooth and shine hair'
+  ],
+
+  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
+  },
 ];
 
 export const categories = [
+  { id: 'health-care', name: 'Health Care', image: aloeliv },
   { id: 'face-care', name: 'Face Care', image: 'https://images.pexels.com/photos/3737594/pexels-photo-3737594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
   { id: 'body-care', name: 'Body Care', image: 'https://images.pexels.com/photos/6621447/pexels-photo-6621447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-  { id: 'hair-care', name: 'Hair Care', image: 'https://images.pexels.com/photos/3737579/pexels-photo-3737579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-  { id: 'sun-care', name: 'Sun Care', image: 'https://images.pexels.com/photos/3737591/pexels-photo-3737591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  { id: 'hair-care', name: 'Hair Care', image: shampoo }
 ];

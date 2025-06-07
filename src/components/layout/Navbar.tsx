@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface NavbarProps {
@@ -8,8 +8,6 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ isScrolled, isMobile = false, onLinkClick }) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
   const baseLinkClasses = `font-medium transition-colors duration-200 ${
     isScrolled ? 'text-gray-800 hover:text-green-700' : 'text-white hover:text-green-200'
   }`;
@@ -24,39 +22,35 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled, isMobile = false, onLinkCli
         Home
       </Link>
 
-      {/* Products with dropdown */}
-      <div
-        className="relative group"
-        onMouseEnter={() => setIsDropdownOpen(true)}
-        onMouseLeave={() => setIsDropdownOpen(false)}
+      <Link
+        to="/medicine"
+        onClick={onLinkClick}
+        className={`${baseLinkClasses} ${isMobile ? 'py-2 border-b border-gray-100' : ''}`}
       >
-        <div
-          className={`${baseLinkClasses} ${isMobile ? 'py-2 border-b border-gray-100' : ''} cursor-pointer`}
-        >
-          Products
-        </div>
+        Medicines
+      </Link>
 
-        {/* Dropdown menu */}
-        {isDropdownOpen && (
-          <div className="absolute left-0 mt-0 w-48 bg-white shadow-lg rounded-md z-20">
-            <Link
-              to="/products/cosmetics"
-              onClick={onLinkClick}
-              className="block px-4 py-2 text-gray-800 hover:bg-green-100"
-            >
-              Cosmetics
-            </Link>
-            <Link
-              to="/products/medicine"
-              onClick={onLinkClick}
-              className="block px-4 py-2 text-gray-800 hover:bg-green-100"
-            >
-              Medicine
-            </Link>
-          </div>
-        )}
-      </div>
 
+      {/* Cosmetics */}
+      <Link
+        to="/cosmetics"
+        onClick={onLinkClick}
+        className={`${baseLinkClasses} ${isMobile ? 'py-2 border-b border-gray-100' : ''}`}
+      >
+        Cosmetics
+      </Link>
+
+       {/* Products */}
+      <Link
+        to="/products"
+        onClick={onLinkClick}
+        className={`${baseLinkClasses} ${isMobile ? 'py-2 border-b border-gray-100' : ''}`}
+      >
+        All Products
+      </Link>
+      
+
+      {/* Other Pages */}
       <Link
         to="/about"
         onClick={onLinkClick}

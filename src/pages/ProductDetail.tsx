@@ -30,6 +30,18 @@ const ProductDetail: React.FC = () => {
     );
   }
 
+  let productType;
+  let productRoute;
+  if(product.type === 'cosmetic'){
+    productType = 'Cosmetics'
+    productRoute = 'cosmetics'
+  } else if(product.type === 'medicine'){
+    productType = 'Medicines'
+    productRoute = 'medicine'
+  } else {
+    productType = 'Products' 
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-green-700 pt-32 pb-12">
@@ -38,9 +50,9 @@ const ProductDetail: React.FC = () => {
           <div className="flex items-center text-sm text-white-500 flex-wrap gap-1">
             <Link to="/" className="text-white hover:text-white">Home</Link>
             <ChevronRight className='text-white' size={16} />
-            <Link to="/products" className="text-white hover:text-white">Products</Link>
+            <Link to={`/${productRoute}`} className="text-white hover:text-white">{productType}</Link>
             <ChevronRight className='text-white' size={16} />
-            <Link to={`/products?category=${product.category.toLowerCase().replace(' ', '-')}`} className="text-white hover:text-white">
+            <Link to={`/${productRoute}?category=${product.category.toLowerCase().replace(' ', '-')}`} className="text-white hover:text-white">
               {product.category}
             </Link>
             <ChevronRight className='text-white' size={16} />
