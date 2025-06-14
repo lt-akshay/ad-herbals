@@ -56,7 +56,7 @@ const Categories: React.FC = () => {
               type="text"
               value={formData.name || ''}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-3 py-2 border rounded-md"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
               required
             />
           </div>
@@ -66,11 +66,11 @@ const Categories: React.FC = () => {
               type="url"
               value={formData.image || ''}
               onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-              className="w-full px-3 py-2 border rounded-md"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
               required
             />
           </div>
-          <div className="flex justify-end space-x-3">
+          <div className="flex justify-end space-x-3 pt-4">
             <Button
               variant="outline"
               onClick={() => {
@@ -112,21 +112,21 @@ const Categories: React.FC = () => {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="bg-gray-50">
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <tr className="bg-green-50">
+                <th className="px-6 py-3 text-left text-xs font-medium text-green-800 uppercase tracking-wider">
                   Image
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-green-800 uppercase tracking-wider">
                   Name
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-right text-xs font-medium text-green-800 uppercase tracking-wider">
                   Actions
                 </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200">
               {categories.map((category) => (
-                <tr key={category.id}>
+                <tr key={category.id} className="hover:bg-green-50">
                   <td className="px-6 py-4 whitespace-nowrap">
                     <img
                       src={category.image}
@@ -134,10 +134,10 @@ const Categories: React.FC = () => {
                       className="h-12 w-12 rounded-lg object-cover"
                     />
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">{category.name}</td>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">{category.name}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-right">
                     <button
-                      className="text-blue-600 hover:text-blue-800 mr-3"
+                      className="text-green-600 hover:text-green-800 mr-3 p-1 rounded hover:bg-green-100"
                       onClick={() => {
                         setSelectedCategory(category);
                         setFormData(category);
@@ -147,7 +147,7 @@ const Categories: React.FC = () => {
                       <Pencil className="w-4 h-4" />
                     </button>
                     <button
-                      className="text-red-600 hover:text-red-800"
+                      className="text-red-600 hover:text-red-800 p-1 rounded hover:bg-red-100"
                       onClick={() => handleDelete(category.id)}
                     >
                       <Trash2 className="w-4 h-4" />
@@ -163,4 +163,4 @@ const Categories: React.FC = () => {
   );
 };
 
-export default Categories
+export default Categories;

@@ -43,7 +43,7 @@ const Carousel: React.FC<CarouselProps> = ({
   }, [currentSlide, autoPlay, interval]);
 
   return (
-    <div className="relative overflow-hidden h-[70vh] bg-gray-100">
+    <div className="relative overflow-hidden h-[70vh] md:h-[90vh] bg-gray-100">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -51,13 +51,20 @@ const Carousel: React.FC<CarouselProps> = ({
             index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
           }`}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent z-10"></div>
-          <img
-            src={slide.image}
-            alt={slide.title}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute top-0 left-0 w-full h-full flex items-center z-20">
+          {/* <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent z-10"></div> */}
+
+          <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="absolute top-0 left-0 object-cover md:object-fill w-full h-full"
+            />
+          </div>
+
+
+
+
+          {/* <div className="absolute top-0 left-0 w-full h-full flex items-center z-20">
             <div className="container mx-auto px-4">
               <div className="max-w-xl">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -72,7 +79,7 @@ const Carousel: React.FC<CarouselProps> = ({
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       ))}
 

@@ -11,6 +11,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import Medicine from './pages/Medicine';
 import ScrollToTop from './pages/ScrollToTop';
 import Cosmetics from './pages/Cosmetics';
+// import Login from './pages/admin/Login';
 // import Dashboard from './pages/admin/Dashboard';
 // import AdminProducts from './pages/admin/Products';
 // import AdminCategories from './pages/admin/Categories';

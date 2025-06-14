@@ -32,10 +32,10 @@ const Products: React.FC = () => {
       setProducts(getProducts());
     }
   };
-
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.category || !formData.price || (!formData.image && !imageFile)) {
+    if (!formData.name || !formData.category || !formData.type || !formData.price || (!formData.image && !imageFile)) {
       alert('Please fill in all required fields');
       return;
     }
@@ -49,8 +49,7 @@ const Products: React.FC = () => {
 
     const productData = {
       ...formData,
-      image: imageUrl,
-      quantity: formData.quantity || 0,
+      image: imageUrl
     };
 
     if (selectedProduct) {
@@ -82,16 +81,17 @@ const Products: React.FC = () => {
               type="text"
               value={formData.name || ''}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-3 py-2 border rounded-md"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
               required
             />
           </div>
+          
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
             <select
               value={formData.category || ''}
               onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-              className="w-full px-3 py-2 border rounded-md"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
               required
             >
               <option value="">Select a category</option>
@@ -102,28 +102,32 @@ const Products: React.FC = () => {
               ))}
             </select>
           </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
+            <select
+              value={formData.type || ''}
+              onChange={(e) => setFormData({ ...formData, type: e.target.value as 'cosmetic' | 'medicine' })}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+              required
+            >
+              <option value="">Select product type</option>
+              <option value="cosmetic">Cosmetic</option>
+              <option value="medicine">Medicine</option>
+            </select>
+          </div>
+
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Price</label>
             <input
               type="number"
               value={formData.price || ''}
               onChange={(e) => setFormData({ ...formData, price: parseFloat(e.target.value) })}
-              className="w-full px-3 py-2 border rounded-md"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
               required
               step="0.01"
             />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
-            <input
-              type="number"
-              value={formData.quantity || 0}
-              onChange={(e) => setFormData({ ...formData, quantity: parseInt(e.target.value) })}
-              className="w-full px-3 py-2 border rounded-md"
-              required
-              min="0"
-            />
-          </div>
+          </div>          
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Image</label>
             <ImageUpload
@@ -131,27 +135,31 @@ const Products: React.FC = () => {
               currentImage={formData.image}
             />
           </div>
+          
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
             <textarea
               value={formData.description || ''}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-              className="w-full px-3 py-2 border rounded-md"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
               required
+              rows={3}
             />
           </div>
+          
           <div>
             <label className="flex items-center">
               <input
                 type="checkbox"
                 checked={formData.featured || false}
                 onChange={(e) => setFormData({ ...formData, featured: e.target.checked })}
-                className="mr-2"
+                className="mr-2 text-green-600 focus:ring-green-500"
               />
               <span className="text-sm font-medium text-gray-700">Featured Product</span>
             </label>
           </div>
-          <div className="flex justify-end space-x-3">
+          
+          <div className="flex justify-end space-x-3 pt-4">
             <Button
               variant="outline"
               onClick={() => {
@@ -194,33 +202,36 @@ const Products: React.FC = () => {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="bg-gray-50">
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <tr className="bg-green-50">
+                <th className="px-6 py-3 text-left text-xs font-medium text-green-800 uppercase tracking-wider">
                   Image
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-green-800 uppercase tracking-wider">
                   Name
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-green-800 uppercase tracking-wider">
                   Category
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-green-800 uppercase tracking-wider">
+                  Type
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-green-800 uppercase tracking-wider">
                   Price
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-green-800 uppercase tracking-wider">
                   Quantity
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-green-800 uppercase tracking-wider">
                   Featured
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-right text-xs font-medium text-green-800 uppercase tracking-wider">
                   Actions
                 </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200">
               {products.map((product) => (
-                <tr key={product.id}>
+                <tr key={product.id} className="hover:bg-green-50">
                   <td className="px-6 py-4 whitespace-nowrap">
                     <img
                       src={product.image}
@@ -228,16 +239,30 @@ const Products: React.FC = () => {
                       className="h-12 w-12 rounded-lg object-cover"
                     />
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">{product.name}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">{product.category}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">${product.price.toFixed(2)}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">{product.quantity}</td>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">{product.name}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">{product.category}</td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    {product.featured ? "Yes" : "No"}
+                    <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
+                      product.type === 'cosmetic' 
+                        ? 'bg-green-100 text-green-800' 
+                        : 'bg-blue-100 text-blue-800'
+                    }`}>
+                      {product.type}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">${product.price.toFixed(2)}</td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
+                      product.featured 
+                        ? 'bg-yellow-100 text-yellow-800' 
+                        : 'bg-gray-100 text-gray-800'
+                    }`}>
+                      {product.featured ? "Yes" : "No"}
+                    </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-right">
                     <button
-                      className="text-blue-600 hover:text-blue-800 mr-3"
+                      className="text-green-600 hover:text-green-800 mr-3 p-1 rounded hover:bg-green-100"
                       onClick={() => {
                         setSelectedProduct(product);
                         setFormData(product);
@@ -247,7 +272,7 @@ const Products: React.FC = () => {
                       <Pencil className="w-4 h-4" />
                     </button>
                     <button
-                      className="text-red-600 hover:text-red-800"
+                      className="text-red-600 hover:text-red-800 p-1 rounded hover:bg-red-100"
                       onClick={() => handleDelete(product.id)}
                     >
                       <Trash2 className="w-4 h-4" />
