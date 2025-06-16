@@ -43,45 +43,21 @@ const Carousel: React.FC<CarouselProps> = ({
   }, [currentSlide, autoPlay, interval]);
 
   return (
-    <div className="relative overflow-hidden h-[70vh] md:h-[90vh] bg-gray-100">
+    <div className="relative overflow-hidden h-[50vh] md:h-[80vh] bg-gray-100">
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-700 ease-in-out ${
-            index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
-          }`}
+          className={`absolute top-0 left-0 w-full h-full bg-green-700 transition-opacity duration-700 ease-in-out ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
         >
-          {/* <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent z-10"></div> */}
-
-          <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className="absolute top-0 left-0 object-cover md:object-fill w-full h-full"
-            />
-          </div>
-
-
-
-
-          {/* <div className="absolute top-0 left-0 w-full h-full flex items-center z-20">
-            <div className="container mx-auto px-4">
-              <div className="max-w-xl">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                  {slide.title}
-                </h2>
-                <p className="text-lg text-white/90 mb-6">{slide.description}</p>
-                <a
-                  href={slide.ctaLink}
-                  className="inline-block bg-green-700 text-white px-6 py-3 rounded-md font-medium hover:bg-green-800 transition-colors duration-200"
-                >
-                  {slide.ctaText}
-                </a>
-              </div>
-            </div>
-          </div> */}
+          <img
+            src={slide.image}
+            alt={slide.title}
+            className="w-full h-full object-contain"
+          />
         </div>
       ))}
+
 
       {/* Navigation arrows */}
       <button
