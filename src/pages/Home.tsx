@@ -21,7 +21,7 @@ const Home: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Our Promise to You</h2>
             <p className="text-lg mb-8">
-              At Herbals, we believe in creating products that are kind to your skin and to the planet.
+              At AD Herbals, we believe in creating products that are kind to your skin and to the planet.
               All our products are cruelty-free, made with natural ingredients, and packaged in
               eco-friendly materials.
             </p>

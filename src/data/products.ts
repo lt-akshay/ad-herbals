@@ -22,6 +22,11 @@ import makaiKutki from '../images/medicine/makaiKutki.jpg';
 import aloeliv from '../images/medicine/ALOELIV.jpg';
 import gasog from '../images/medicine/GASOG.jpg';
 import narioop from '../images/medicine/NARIROOP.jpg';
+import healthCare1 from '../images/medicine/health_care1.webp';
+import bodyCare2 from '../images/bodyCare/body_care2.webp';
+import faceCare2 from '../images/facewash/face_care2.webp';
+import hairCare1 from '../images/hareCare/hair_care1.webp';
+import hairCare2 from '../images/hareCare/hair_care2.webp';
 
 
 
@@ -374,8 +379,8 @@ export const products: Product[] = [
 ];
 
 export const categories = [
-  { id: 'health-care', name: 'Health Care', image: aloeliv },
-  { id: 'face-care', name: 'Face Care', image: 'https://images.pexels.com/photos/3737594/pexels-photo-3737594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-  { id: 'body-care', name: 'Body Care', image: 'https://images.pexels.com/photos/6621447/pexels-photo-6621447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-  { id: 'hair-care', name: 'Hair Care', image: shampoo }
+  { id: 'health-care', name: 'Health Care', image: healthCare1 },
+  { id: 'face-care', name: 'Face Care', image: faceCare2 },
+  { id: 'body-care', name: 'Body Care', image: bodyCare2 },
+  { id: 'hair-care', name: 'Hair Care', image: hairCare2 }
 ];
