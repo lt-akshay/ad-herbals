@@ -33,7 +33,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, size = 'md' }) => {
           <img
             src={image}
             alt={name}
-            className="max-h-full max-w-full object-contain"
+            className="w-full h-full object-fill"
           />
         </Link>
         {/* <button className="absolute top-3 right-3 p-1.5 bg-white rounded-full text-gray-600 hover:text-red-500 transition-colors duration-200">
