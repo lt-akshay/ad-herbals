@@ -15,7 +15,7 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ 
   slides, 
-  autoPlay = true, 
+  autoPlay = false, 
   interval = 5000 
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -53,7 +53,7 @@ const Carousel: React.FC<CarouselProps> = ({
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-contain"
+            className="w-full h-full object-fill"
           />
         </div>
       ))}
