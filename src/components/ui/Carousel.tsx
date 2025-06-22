@@ -43,7 +43,7 @@ const Carousel: React.FC<CarouselProps> = ({
   }, [currentSlide, autoPlay, interval]);
 
   return (
-    <div className="relative overflow-hidden h-[50vh] md:h-[90vh] bg-gray-100">
+    <div className="relative overflow-hidden h-[40vh] md:h-[90vh] bg-gray-100">
       {slides.map((slide, index) => (
         <div
           key={index}
