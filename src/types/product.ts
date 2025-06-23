@@ -9,6 +9,10 @@ export interface Product {
   featured?: boolean;
   benefits?:string[];
   indications?:string;
+  promo?: {
+    discountPercentage: number;
+    code: string;
+  };
 }
 
 export interface Category {

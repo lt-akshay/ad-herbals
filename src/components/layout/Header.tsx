@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom';
 import { ShoppingBag, Search, Menu, X, User } from 'lucide-react';
 import Navbar from './Navbar';
 import logo from '../../images/logo/Ad_Harbals.png'
+import PromoBanner from './PromoBanner';
+import { products } from '../../data/products'; 
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [promoVisible, setPromoVisible] = useState(true); 
 
+    const promoProduct = products.find(p => p.promo);
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -18,9 +22,14 @@ const Header: React.FC = () => {
   }, []);
 
   return (
+    <>
+    {promoVisible && promoProduct && (
+        <PromoBanner product={promoProduct} onClose={() => setPromoVisible(false)} />
+      )}
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
-        }`}
+     className={`fixed left-0 ${promoVisible ? 'top-10' : 'top-0'} right-0 z-50 transition-all duration-300 ${
+    isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+  }`}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -76,7 +85,8 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-
+ {/* 👇 Imported promo banner here */}
+      {/* <PromoBanner /> */}
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white">
@@ -86,6 +96,7 @@ const Header: React.FC = () => {
         </div>
       )}
     </header>
+    </>
   );
 };
 
