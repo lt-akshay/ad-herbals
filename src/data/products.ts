@@ -41,7 +41,7 @@ export const products: Product[] = [
     description: 'Aloe vera is a gel-like substance obtained from aloe, which is a succulent plant that typically grows in hot, dry climates. "[Aloe vera] has antioxidant, antibacterial and anti- inflammatory properties that boost healing, moisturize the skin and prevent aging."It supports the production and release of collagen.',
     featured: true,
     promo: {
-      discountPercentage: 20,
+      discountPercentage: 30,
       code: 'AD20',
     },
   },

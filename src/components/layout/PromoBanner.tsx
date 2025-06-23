@@ -16,25 +16,26 @@ const PromoBanner: React.FC<PromoBannerProps> = ({ onClose, product }) => {
       <div className="max-w-7xl mx-auto w-full flex items-center justify-between px-3 py-1.5 sm:py-2 text-[0.7rem] sm:text-sm md:text-base text-center sm:text-left relative">
         <div className="flex items-center gap-2 overflow-hidden w-full pr-6 sm:pr-0">
           {/* Hide image on small screens */}
-          <img
+          {/* <img
             src={product.image}
             alt={product.name}
             className="hidden sm:block h-6 w-6 sm:h-7 sm:w-7 rounded-full object-cover border border-white"
-          />
-          <p className="leading-snug truncate sm:whitespace-normal w-full">
-            <strong>{product.name}</strong> now at <strong>{promo.discountPercentage}% OFF</strong> – Use code{' '}
-            <span className="bg-white text-green-700 font-semibold px-2 py-0.5 rounded">{promo.code}</span>
+          /> */}
+          <p className="leading-snug truncate sm:whitespace-normal w-full text-center">
+            {/* <strong>{product.name}</strong> now at <strong>{promo.discountPercentage}% OFF</strong> – Use code{' '} */}
+            Limited Time Offer:<strong> {promo.discountPercentage}%</strong> Off All Products!
+            {/* <span className="bg-white text-green-700 font-semibold px-2 py-0.5 rounded">{promo.code}</span> */}
           </p>
         </div>
 
         {/* Close Button */}
-        <button
+        {/* <button
           onClick={onClose}
           className="absolute right-3 top-1/2 -translate-y-1/2 sm:static sm:translate-y-0 text-white hover:text-yellow-300 transition"
           aria-label="Close banner"
         >
           <X size={18} />
-        </button>
+        </button> */}
       </div>
     </div>
   );
