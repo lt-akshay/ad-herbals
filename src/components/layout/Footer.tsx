@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">AD HERBALS</h3>
             <p className="mb-4">
-              Natural skincare and cosmetics that nurture your skin and respect the environment.
+              Natural healthcare, skincare and cosmetics that nurture your skin and respect the environment.
             </p>
             <div className="flex space-x-4">
               <a target='_blank' href="https://www.facebook.com/share/1DpnpgUbvh/?mibextid=wwXIfr" className="p-2 rounded-full bg-green-800 hover:bg-green-700">

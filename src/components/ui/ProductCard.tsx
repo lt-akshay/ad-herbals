@@ -50,17 +50,29 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, size = 'md' }) => {
             {name}
           </h3>
         </Link>
-        <div className="flex justify-between items-center mt-auto">
-          <span className="font-bold text-gray-900">₹{price.toFixed(2)}</span>
-          <Button
-            variant="primary"
-            size="sm"
-            className="flex items-center gap-1"
-          >
-            <ShoppingBag size={16} />
-            <span>Add</span>
-          </Button>
-        </div>
+      <div className="mt-auto">
+  <div className="flex items-center space-x-2 mb-2">
+    <span className="text-lg font-semibold text-gray-900">
+      ₹{price.toFixed(2)}
+    </span>
+    <span className="text-sm text-gray-500 line-through">
+      ₹{(price / 0.3).toFixed(2)}
+    </span>
+    <span className="text-sm text-green-600 font-medium">
+      (30% OFF)
+    </span>
+  </div>
+
+  <Button
+    variant="primary"
+    size="sm"
+    className="w-full flex items-center justify-center gap-1"
+  >
+    <ShoppingBag size={16} />
+    <span>Add to Cart</span>
+  </Button>
+</div>
+
       </div>
     </div>
   );

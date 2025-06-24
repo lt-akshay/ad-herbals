@@ -22,7 +22,7 @@ import makaiKutki from '../images/medicine/makaiKutki.jpg';
 import aloeliv from '../images/medicine/ALOELIV.jpg';
 import gasog from '../images/medicine/GASOG.jpg';
 import narioop from '../images/medicine/NARIROOP.jpg';
-import healthCare1 from '../images/medicine/health_care1.webp';
+import healthCare1 from '../images/medicine/health_care3.webp';
 import bodyCare2 from '../images/bodyCare/body_care2.webp';
 import faceCare2 from '../images/facewash/face_care2.webp';
 import hairCare1 from '../images/hareCare/hair_care1.webp';

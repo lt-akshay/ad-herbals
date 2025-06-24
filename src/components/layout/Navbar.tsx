@@ -2,15 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface NavbarProps {
-  isScrolled: boolean;
   isMobile?: boolean;
   onLinkClick?: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ isScrolled, isMobile = false, onLinkClick }) => {
-  const baseLinkClasses = `font-medium transition-colors duration-200 ${
-    isScrolled ? 'text-gray-800 hover:text-green-700' : 'text-white hover:text-green-200'
-  }`;
+const Navbar: React.FC<NavbarProps> = ({ isMobile = false, onLinkClick }) => {
+  const baseLinkClasses = `font-medium text-gray-800 hover:text-green-700 transition-colors duration-200`;
 
   return (
     <nav className={isMobile ? 'flex flex-col space-y-4' : 'flex space-x-8 relative'}>
@@ -30,8 +27,6 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled, isMobile = false, onLinkCli
         Medicines
       </Link>
 
-
-      {/* Cosmetics */}
       <Link
         to="/cosmetics"
         onClick={onLinkClick}
@@ -40,7 +35,6 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled, isMobile = false, onLinkCli
         Cosmetics
       </Link>
 
-       {/* Products */}
       <Link
         to="/products"
         onClick={onLinkClick}
@@ -48,9 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled, isMobile = false, onLinkCli
       >
         All Products
       </Link>
-      
 
-      {/* Other Pages */}
       <Link
         to="/about"
         onClick={onLinkClick}

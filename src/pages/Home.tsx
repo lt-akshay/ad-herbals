@@ -27,7 +27,7 @@ const Home: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="bg-green-800/50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3">100% Natural</h3>
+                <h3 className="text-xl font-semibold mb-3">Natural</h3>
                 <p>Our products are made with natural ingredients sourced sustainably.</p>
               </div>
               <div className="bg-green-800/50 p-6 rounded-lg">
