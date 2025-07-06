@@ -78,7 +78,8 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-green-800 mt-8 pt-8 text-center">
-          <p>&copy; {new Date().getFullYear()} Herbals. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Herbals. All rights reserved. Design By
+            <a  target='_blank' href='https://webjini.in/' style={{color:'#afaf53'}}> Webjini</a> </p>
         </div>
       </div>
     </footer>

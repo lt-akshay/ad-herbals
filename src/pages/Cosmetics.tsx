@@ -74,7 +74,7 @@ const Cosmetics: React.FC = () => {
                     }`}
                   onClick={() => handleCategoryChange(null)}
                 >
-                  All Products
+                  Cosmetics
                 </div>
                 {categories.map((category) => (
                   <div
