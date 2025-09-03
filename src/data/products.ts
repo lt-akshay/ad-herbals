@@ -37,7 +37,7 @@ export const products: Product[] = [
     category: 'Face Care',
     type: 'cosmetic',
     image: alovera,
-    price: 60,
+    price: 65,
     description: 'Aloe vera is a gel-like substance obtained from aloe, which is a succulent plant that typically grows in hot, dry climates. "[Aloe vera] has antioxidant, antibacterial and anti- inflammatory properties that boost healing, moisturize the skin and prevent aging."It supports the production and release of collagen.',
     featured: true,
     promo: {
@@ -51,7 +51,7 @@ export const products: Product[] = [
     category: 'Face Care',
     type: 'cosmetic',
     image: vitaminc,
-    price: 110,
+    price: 199,
     description: 'An intensely hydrating serum that locks in moisture and gives your skin a radiant glow. Perfect for all skin types.',
     featured: true,
      benefits: [
@@ -70,7 +70,7 @@ export const products: Product[] = [
   category: 'Health Care',
   type: 'medicine',
   image: onion, // import this or use a URL
-  price: 295,
+  price: 165,
   featured: true,
   description: 'This powerful remedy protects and nourishes hair to reduce hair loss and breakage, with the added benefits of Fenugreek.',
 
@@ -90,7 +90,7 @@ export const products: Product[] = [
     category: 'Face Care',
     type: 'cosmetic',
     image: rose,
-    price: 70,
+    price: 80,
     description: 'It effectively blocks that process in the skin that leads to discoloration. Rose Moisturizer also reduces any redness, rash, pain, or itchiness that may be caused by this condition. This improves your self-esteem and confidence as your appearance changes.',
     featured: false,    
   },
@@ -100,7 +100,7 @@ export const products: Product[] = [
     category: 'Face Care',
     type: 'cosmetic',
     image: skin_brightening,
-    price: 150,
+    price: 189,
     description: 'Gentle yet effective exfoliating scrub that removes dead skin cells and unclogs pores for smoother skin.',
     featured: false,
      benefits: [
@@ -137,7 +137,7 @@ export const products: Product[] = [
     category: 'Body Care',
     type: 'cosmetic',
     image: lavender,
-    price: 80,
+    price: 199,
     description: 'A deeply nourishing conditioner that repairs damaged hair and prevents split ends for healthier, shinier hair.',
     featured: false,
      benefits: [
@@ -176,7 +176,7 @@ export const products: Product[] = [
     category: 'Body Care',
     type: 'cosmetic',
     image: lemon,
-    price: 170,
+    price: 99,
     description: 'High protection sunscreen that shields skin from harmful UV rays while hydrating and nourishing.',
     featured: false,
      benefits: [
@@ -195,7 +195,7 @@ export const products: Product[] = [
     category: 'Body Care',
     type: 'cosmetic',
     image: ocean_bridge,
-    price: 149,
+    price: 199,
     description: 'A cooling, soothing gel that calms sun-exposed skin, reduces redness, and prevents peeling.',
     featured: false,
      benefits: [
@@ -214,7 +214,7 @@ export const products: Product[] = [
     category: 'Face Care',
     type: 'cosmetic',
     image: coconut,
-    price: 125,
+    price: 99,
     description: 'A rich night cream that works while you sleep to reduce wrinkles and improve skin elasticity.',
     featured: true,
      benefits: [
@@ -231,32 +231,32 @@ export const products: Product[] = [
 
   indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
   },
-  {
-    id: '13',
-    name: 'Bluberry & Tea Tree Hand Wash',
-    category: 'Body Care',
-    type: 'cosmetic',
-    image: bluberry,
-    price: 120,
-    description: 'A rich night cream that works while you sleep to reduce wrinkles and improve skin elasticity.',
-    featured: true,
-     benefits: [
-    'Anti-Hairfall',
-    'Anti-Dandruff',
-    'Adds strength and shine',
-    'Boosts hair growth',
-    'Controls scalp inflammation'
-  ],
+  // {
+  //   id: '13',
+  //   name: 'Bluberry & Tea Tree Hand Wash',
+  //   category: 'Body Care',
+  //   type: 'cosmetic',
+  //   image: bluberry,
+  //   price: 120,
+  //   description: 'A rich night cream that works while you sleep to reduce wrinkles and improve skin elasticity.',
+  //   featured: true,
+  //    benefits: [
+  //   'Anti-Hairfall',
+  //   'Anti-Dandruff',
+  //   'Adds strength and shine',
+  //   'Boosts hair growth',
+  //   'Controls scalp inflammation'
+  // ],
 
-  indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
-  },
+  // indications: "Helps in making roots strong and hair voluminous Prevents early greying of hair Reduces baldness Reduces hair fall"
+  // },
   {
     id: '14',
     name: 'Chandan and Kesar Gel',
     category: 'Face Care',
     type: 'cosmetic',
     image: chandan,
-    price: 125,
+    price: 75,
     description: 'Chandan and Kesar Gel Known to be an antiseptic agent, Sandalwood, popularly known as Chandan in India, is also said to be a natural healer in Ayurveda.AD Herbals Sandalwood Face Gel helps reduce inflammation,soothe sunburns, fight acne causing bacteria, and remove sun tan.',
     featured: false,
      benefits: [
@@ -270,7 +270,7 @@ export const products: Product[] = [
     category: 'Body Care',
     type: 'cosmetic',
     image: neem,
-    price: 135,
+    price: 99,
     description: 'A rich night cream that works while you sleep to reduce wrinkles and improve skin elasticity.',
     featured: false,
      benefits: [
@@ -289,7 +289,7 @@ export const products: Product[] = [
     category: 'Face Care',
     type: 'cosmetic',
     image: saffron,
-    price: 299,
+    price: 249,
     description: 'Constant use of saffron can improve your skin tone, smoothen its texture, and brighten your appearance. It can also help reduce excessive sun tan and thus provide a natural radiance. In addition, this red-colored flower helps treat hyperpigmentation, acne, and scars and helps you have a blemish-free appearance.',
     featured: false,
      benefits: [
@@ -308,7 +308,7 @@ export const products: Product[] = [
     category: 'Face Care',
     type: 'cosmetic',
     image: cleansing,
-    price: 70,
+    price: 80,
     description: 'Cleansing milk is an excellent choice for those with dry or sensitive skin. Its creamy texture and nourishing ingredients help to hydrate and purify the skin, leaving it feeling soft and supple. Cleansing milk also helps to remove impurities from the skin, leaving it looking nourished and glowing.',
     featured: false,  
   },
@@ -318,7 +318,7 @@ export const products: Product[] = [
     category: 'Health Care',
     type: 'medicine',
     image: kanchnar,
-    price: 160,
+    price: 290,
     description: 'Cleansing milk is an excellent choice for those with dry or sensitive skin. Its creamy texture and nourishing ingredients help to hydrate and purify the skin, leaving it feeling soft and supple. Cleansing milk also helps to remove impurities from the skin, leaving it looking nourished and glowing.',
     featured: false,  
   },
@@ -328,7 +328,7 @@ export const products: Product[] = [
     category: 'Health Care',
     type: 'medicine',
     image: makaiKutki,
-    price: 150,
+    price: 250,
     description: 'Cleansing milk is an excellent choice for those with dry or sensitive skin. Its creamy texture and nourishing ingredients help to hydrate and purify the skin, leaving it feeling soft and supple. Cleansing milk also helps to remove impurities from the skin, leaving it looking nourished and glowing.',
     featured: false,  
   },
@@ -348,7 +348,7 @@ export const products: Product[] = [
     category: 'Health Care',
     type: 'medicine',
     image: gasog,
-    price: 150,
+    price: 140,
     description: 'Cleansing milk is an excellent choice for those with dry or sensitive skin. Its creamy texture and nourishing ingredients help to hydrate and purify the skin, leaving it feeling soft and supple. Cleansing milk also helps to remove impurities from the skin, leaving it looking nourished and glowing.',
     featured: false,  
   },

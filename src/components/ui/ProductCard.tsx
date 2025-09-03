@@ -24,6 +24,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, size = 'md' }) => {
     lg: 'h-[250px]',
   };
 
+  
+  const cp = parseInt(price.toFixed(0))
+  const discountPercentage = 30;
+  const sellingPrice = cp - ((cp * discountPercentage) / 100);
+
   return (
     <div
       className={`flex flex-col justify-between ${cardSizes[size]} bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300`}
@@ -53,10 +58,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, size = 'md' }) => {
         <div className="mt-auto">
           <div className="flex items-center space-x-2 mb-2">
             <span className="text-lg font-semibold text-gray-900">
-              ₹{price.toFixed(0)}
+              ₹{sellingPrice.toFixed(0)}
             </span>
             <span className="text-sm text-gray-500 line-through">
-              ₹{(price / 0.7).toFixed(0)}
+              ₹{price.toFixed(0)}
             </span>
             <span className="text-sm text-green-600 font-medium">
               (30% OFF)
